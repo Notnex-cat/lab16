@@ -16,4 +16,4 @@ if __name__ == '__main__':
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
 
 
-# чтобы запустить python manage.py runserver
+# чтобы запустить cd project_manager, python manage.py runserver
