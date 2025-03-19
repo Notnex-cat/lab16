@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{ project.name }}</h1>
+<p>{{ project.description }}</p>
+<p>Start Date: {{ project.start_date }} - End Date: {{ project.end_date }}</p>
+
+<h2>Tasks</h2>
+{% for task in tasks %}
+    <div>
+        <h3>{{ task.name }}</h3>
+        <p>Status: {{ task.get_status_display }}</p>
+        <p>Assigned to: {{ task.assignee }}</p>
+        <a href="{% url 'create_task' project.id %}">Create Task</a>
+    </div>
+{% endfor %}
+</body>
+</html>
